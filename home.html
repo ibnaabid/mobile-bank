@@ -9,74 +9,108 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>payoo || home</title>
 </head>
-<body class="bg-base-200 min-h-screen mx-auto">
+<body class="min-h-screen mx-auto bg-base-200">
 
-    <header class="border-b-2 py-5 sticky z-20 border-gray-300">
-        <section class="flex justify-between mr-4 items-center">
+    <header class="sticky z-20 py-5 border-b-2 border-gray-300">
+        <section class="flex items-center justify-between mr-4">
             <div class="right w-[80px]  flex">
                 <img src="./payoo-resources/assets/Logo.png" alt="" srcset="">
                 
                 <br>
-                <h2 class="font-bold text-2xl px-5">Available-</h2>
+                <h2 class="px-5 text-2xl font-bold">Available-</h2>
                 <p class="text-xl +"><span id="amountauto">4500</span></p>
             </div>
-            <div class="left mr-5">
+            <div class="mr-5 left">
            <a href="/login.html" class=" btn btn-soft"><i class="fa-solid fa-right-from-bracket"></i>
 logout</a>
            </div>
         </section>
     </header>
 
-            <section class="container space-y ml-15 py-10">
+            <section class="container py-10 space-y ml-15">
                 <h2 class="text-3xl font-bold ">Welcome to pay<span class="text-purple-600">oo</span></h2>
                 <p class="text-gray-400 text-[17px] py-5">payoo is the best services app , its provide us <br>different kind of tragity</p>
             </section>
-        <div class="grid grid-cols-3 space-y-4 gap-6">
-            <button class="btn btn-soft py-8 ml-10">
+        <div class="grid grid-cols-3 gap-6 space-y-4">
+            <button id="cashIn" class="py-8 ml-10 btn btn-soft">
                 <img src="./payoo-resources/assets/opt-1.png" alt="" srcset="">
                 <p>Add money</p>
             </button>
-            <button class="btn btn-soft py-8 ml-10">
+            <button id="cashOut" class="py-8 ml-10 btn btn-soft">
                 <img src="./payoo-resources/assets/opt-2.png" alt="" srcset="">
                 <p>cashout </p>
             </button>
-            <button class="btn btn-soft py-8 ml-10">
+            <button class="py-8 ml-10 btn btn-soft">
                 <img src="./payoo-resources/assets/opt-3.png" alt="" srcset="">
                 <p>transfer money</p>
             </button>
-            <button class="btn btn-soft py-8 ml-10">
+            <button class="py-8 ml-10 btn btn-soft">
                 <img src="./payoo-resources/assets/opt-4.png" alt="" srcset="">
                 <p>get bonus</p>
             </button>
-            <button class="btn btn-soft py-8 ml-10">
+            <button class="py-8 ml-10 btn btn-soft">
                 <img src="./payoo-resources/assets/opt-5.png" alt="" srcset="">
                 <p>paybill</p>
             </button>
-            <button class="btn btn-soft py-8 ml-10">
+            <button class="py-8 ml-10 btn btn-soft">
                 <img src="./payoo-resources/assets/opt-6.png" alt="" srcset="">
                 <p>transition</p>
             </button>
         </div>
     
-        <div class="hero ">
-        <div class="card bg-base-100 w-full  shadow-2xl">
+
+       
+
+        <div id="cashout-form" class="hidden hero">
+        <div class="w-full shadow-2xl card bg-base-100">
       <div class="card-body pt-30">
         <fieldset class="fieldset">
-            <h1 class="text-3xl text-black  pb-4 font-bold">Cash Out</h1>
-          <label  class="label font-bold text-black">Agent Number</label>
-          <input maxlength="11" minlength="11" id="agent-number"  type="email" class="input rounded-full" placeholder="enter your agent number" />
-          <label class="label font-bold text-black">Amount</label>
-          <input id="amount" type="password" class="input rounded-full" placeholder="enter your amount" />
+            <h1 class="pb-4 text-3xl font-bold text-black">Cash Out</h1>
+          <label  class="font-bold text-black label">Agent Number</label>
+          <input maxlength="11" minlength="11" id="agent-number"  type="email" class="rounded-full input" placeholder="enter your agent number" />
+          <label class="font-bold text-black label">Amount</label>
+          <input id="amount" type="password" class="rounded-full input" placeholder="enter your amount" />
           <br>
-          <label class="label font-bold text-black">Pin Number</label>
-          <input maxlength="4" minlength="4" id="cash" type="password" class="input rounded-full" placeholder="enter your pin" />
-          <button id="Withdraw" class="btn  rounded-xl btn-primary mt-4">Withdraw money</button>
+          <label class="font-bold text-black label">Pin Number</label>
+          <input maxlength="4" minlength="4" id="cash" type="password" class="rounded-full input" placeholder="enter your pin" />
+          <button id="Withdraw" class="mt-4 btn rounded-xl btn-primary">Withdraw money</button>
         </fieldset>
       </div>
     </div>
 
     </div>
+
+
+    <section>
+          <div id="cashin-form" class="hidden hero">
+        <div class="w-full shadow-2xl card bg-base-100">
+      <div class="card-body pt-30">
+        <fieldset class="fieldset">
+            <h1 class="pb-4 text-3xl font-bold text-black">Add money</h1>
+          <label class="font-bold text-black label">Select a bank</label>
+          <select id="bank-selector" class="rounded-full select">
+  <option disabled selected class="text-gray-600">select  bank</option>
+  <option>city bank</option>
+  <option>IfIc</option>
+  <option>national bank</option>
+</select>
+          <label class="font-bold text-black label">bank account number</label>
+          <input maxlength="11" minlength="11" id="bank-accountNum" type="password" class="rounded-full input" placeholder="enter your number" />
+          <label class="font-bold text-black label">amount to add</label>
+          <input id="add-amount" type="password" class="rounded-full input" placeholder="add amount to Withdraw" />
+          <label class="font-bold text-black label">Pin Number</label>
+          <input maxlength="4" minlength="4" id="pinw" type="password" class="rounded-full input" placeholder="enter your pin" />
+          <button id="add-money" class="mt-4 btn rounded-xl btn-primary">Add money</button>
+        </fieldset>
+      </div>
+    </div>
+
+    </div>
+    </section>
     <script src="script js/cashout.js"></script>
+    <script src="script js/addmoney.js"></script>
+    <script src="script js/hide.js"></script>
+
 
     
 </body>
