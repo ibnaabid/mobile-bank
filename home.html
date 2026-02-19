@@ -18,7 +18,7 @@
                 
                 <br>
                 <h2 class="px-5 text-2xl font-bold">Available-</h2>
-                <p class="text-xl +"><span id="amountauto">4500</span></p>
+                <p class="text-xl"><span id="amountauto">4500</span></p>
             </div>
             <div class="mr-5 left">
            <a href="/login.html" class=" btn btn-soft"><i class="fa-solid fa-right-from-bracket"></i>
@@ -40,7 +40,7 @@ logout</a>
                 <img src="./payoo-resources/assets/opt-2.png" alt="" srcset="">
                 <p>cashout </p>
             </button>
-            <button class="py-8 ml-10 btn btn-soft">
+            <button id="transferBtn" class="py-8 ml-10 btn btn-soft">
                 <img src="./payoo-resources/assets/opt-3.png" alt="" srcset="">
                 <p>transfer money</p>
             </button>
@@ -58,8 +58,6 @@ logout</a>
             </button>
         </div>
     
-
-       
 
         <div id="cashout-form" class="hidden hero">
         <div class="w-full shadow-2xl card bg-base-100">
@@ -107,9 +105,31 @@ logout</a>
 
     </div>
     </section>
+
+
+    <section>
+        <div id="transfer-form" class="hero hidden">
+        <div class="w-full shadow-2xl card bg-base-100">
+      <div class="card-body pt-30">
+        <fieldset class="fieldset">
+            <h1 class="pb-4 text-3xl font-bold text-black">transfer money</h1>
+          <label  class="font-bold text-black label">User account Number</label>
+          <input maxlength="11" minlength="11" id="transfer-number"  type="email" class="rounded-full input" placeholder="enter 11 digit number" />
+          <label class="font-bold text-black label">Amount</label>
+          <input id="amount-transfer" type="password" class="rounded-full input" placeholder="enter amount to transfer" />
+          <br>
+          <label class="font-bold text-black label">Pin Number</label>
+          <input maxlength="4" minlength="4" id="transferPassword" type="password" class="rounded-full input" placeholder="enter pin" />
+          <button id="transfer-btn" class="mt-4 btn rounded-xl btn-primary">Send now</button>
+        </fieldset>
+      </div>
+    </div>
+
+    </div></section>
     <script src="script js/cashout.js"></script>
     <script src="script js/addmoney.js"></script>
     <script src="script js/hide.js"></script>
+    <script src="script js/transfer.js"></script>
 
 
     

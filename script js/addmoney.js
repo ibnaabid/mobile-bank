@@ -28,7 +28,7 @@ document.getElementById("add-money").addEventListener("click", function(){
     const pass = passwordOfId.value;
     
     if(pass ==="1234"){
-        alert(`add money successfully & {bankAccount} & at{new Date()}`);
+        alert("add money successfully");
         cashOutBalance.innerText= totalBalance;
 
     }
