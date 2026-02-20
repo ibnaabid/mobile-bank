@@ -9,7 +9,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>payoo || home</title>
 </head>
-<body class="min-h-screen mx-auto bg-base-200">
+
+<body class="min-h-screen mx-auto bg-base-200 ">
+    
 
     <header class="sticky z-20 py-5 border-b-2 border-gray-300">
         <section class="flex items-center justify-between mr-4">
@@ -44,11 +46,11 @@ logout</a>
                 <img src="./payoo-resources/assets/opt-3.png" alt="" srcset="">
                 <p>transfer money</p>
             </button>
-            <button class="py-8 ml-10 btn btn-soft">
+            <button id="bonus" class="py-8 ml-10 btn btn-soft">
                 <img src="./payoo-resources/assets/opt-4.png" alt="" srcset="">
                 <p>get bonus</p>
             </button>
-            <button class="py-8 ml-10 btn btn-soft">
+            <button id="bill" class="py-8 ml-10 btn btn-soft">
                 <img src="./payoo-resources/assets/opt-5.png" alt="" srcset="">
                 <p>paybill</p>
             </button>
@@ -125,7 +127,61 @@ logout</a>
       </div>
     </div>
 
-    </div></section>
+    </div>
+</section>
+
+       <section>
+                <div id="bonus-form" class="hero hidden ">
+        <div class="w-full shadow-2xl card bg-base-100">
+      <div class="card-body pt-30">
+        <fieldset class="fieldset">
+          <label class="font-bold text-black label">Enter bonus cupon</label>
+          <br>
+          <input id="cupon-form" type="password" class="rounded-full input" placeholder="get bonus"/>
+          <br>
+          <button id="cupon" class="mt-4 btn rounded-xl btn-primary">Add money</button>
+        </fieldset>
+      </div>
+      </div>
+        </div>
+       </section>
+       
+    <section>
+          <div id="pay-form" class="hidden hero">
+        <div class="w-full shadow-2xl card bg-base-100">
+      <div class="card-body pt-30">
+        <fieldset class="fieldset">
+            <h1 class="pb-4 text-3xl font-bold text-black">pay bill</h1>
+          <label class="font-bold text-black label">Select to pay</label>
+          <select id="pay-selector" class="rounded-full select">
+  <option disabled selected class="text-gray-600">select  bank</option>
+  <option>bikash</option>
+  <option>nogod</option>
+  <option>upay</option>
+</select>
+          <label class="font-bold text-black label">biller account number</label>
+          <input maxlength="11" minlength="11" id="pay-accountNum" type="password" class="rounded-full input" placeholder="enter account number" />
+          <label class="font-bold text-black label">amount to pay</label>
+          <input id="pay-amount" type="password" class="rounded-full input" placeholder="add amount to pay" />
+          <label class="font-bold text-black label">Pin Number</label>
+          <input maxlength="4" minlength="4" id="pay-pin" type="password" class="rounded-full input" placeholder="enter your pin" />
+          <button id="pay-money" class="mt-4 btn rounded-xl btn-primary">pay money</button>
+        </fieldset>
+      </div>
+    </div>
+
+    </div>
+    </section>
+
+
+       
+    
+
+    </div>
+</section>
+       
+
+      <script src="script js/pay.js"></script>
     <script src="script js/cashout.js"></script>
     <script src="script js/addmoney.js"></script>
     <script src="script js/hide.js"></script>
