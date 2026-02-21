@@ -7,24 +7,27 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>payoo || home</title>
+    <title> payoo || home</title>
 </head>
 
-<body class="min-h-screen mx-auto bg-base-200 ">
+<body class="min-h-screen bg-gradient-to-br from-gray-100 to-purple-100 ">
     
 
-    <header class="sticky z-20 py-5 border-b-2 border-gray-300">
+    <header class="sticky top-0 z-20 py-5 border-b 
+bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg">
         <section class="flex items-center justify-between mr-4">
             <div class="right w-[80px]  flex">
                 <img src="./payoo-resources/assets/Logo.png" alt="" srcset="">
                 
                 <br>
                 <h2 class="px-5 text-2xl font-bold">Available-</h2>
-                <p class="text-xl"><span id="amountauto">4500</span></p>
+                <p class="text-xl"><span id="Available-money">4500</span></p>
             </div>
             <div class="mr-5 left">
-           <a href="/login.html" class=" btn btn-soft"><i class="fa-solid fa-right-from-bracket"></i>
-logout</a>
+           <!-- <a href="/login.html" class=" btn btn-soft"><i class="fa-solid fa-right-from-bracket"></i>
+logout</a> -->
+
+<a href="login.html" class="btn-soft btn"><i class=" fa-solid fa-right-from-bracket"></i> log out</a>
            </div>
         </section>
     </header>
@@ -33,35 +36,35 @@ logout</a>
                 <h2 class="text-3xl font-bold ">Welcome to pay<span class="text-purple-600">oo</span></h2>
                 <p class="text-gray-400 text-[17px] py-5">payoo is the best services app , its provide us <br>different kind of tragity</p>
             </section>
-        <div class="grid grid-cols-3 gap-6 space-y-4">
-            <button id="cashIn" class="py-8 ml-10 btn btn-soft">
+        <div class="grid grid-cols-3 gap-6 space-y-4 ">
+            <button id="cashIn" class=" card-body pt-10 bg-white rounded-2xl shadow-xl  py-8 hover:bg-green ml-10 btn btn-soft">
                 <img src="./payoo-resources/assets/opt-1.png" alt="" srcset="">
                 <p>Add money</p>
             </button>
-            <button id="cashOut" class="py-8 ml-10 btn btn-soft">
+            <button id="cashOut" class=" card-body pt-10 bg-white rounded-2xl shadow-xl py-8 ml-10 btn btn-soft">
                 <img src="./payoo-resources/assets/opt-2.png" alt="" srcset="">
                 <p>cashout </p>
             </button>
-            <button id="transferBtn" class="py-8 ml-10 btn btn-soft">
+            <button id="transferBtn" class=" card-body pt-10 bg-white rounded-2xl shadow-xl py-8 ml-10 btn btn-soft">
                 <img src="./payoo-resources/assets/opt-3.png" alt="" srcset="">
                 <p>transfer money</p>
             </button>
-            <button id="bonus" class="py-8 ml-10 btn btn-soft">
+            <button id="bonus" class=" card-body pt-10 bg-white rounded-2xl shadow-xl  py-8 ml-10 btn btn-soft">
                 <img src="./payoo-resources/assets/opt-4.png" alt="" srcset="">
                 <p>get bonus</p>
             </button>
-            <button id="bill" class="py-8 ml-10 btn btn-soft">
+            <button id="bill" class="py-8 card-body pt-10 bg-white rounded-2xl shadow-xl ml-10 btn btn-soft">
                 <img src="./payoo-resources/assets/opt-5.png" alt="" srcset="">
                 <p>paybill</p>
             </button>
-            <button class="py-8 ml-10 btn btn-soft">
+            <button id="historyBtn" class=" card-body pt-10 bg-white rounded-2xl shadow-xl py-8 ml-10 btn btn-soft">
                 <img src="./payoo-resources/assets/opt-6.png" alt="" srcset="">
                 <p>transition</p>
             </button>
         </div>
     
 
-        <div id="cashout-form" class="hidden hero">
+        <div id="cashout-form" class="  hidden hero">
         <div class="w-full shadow-2xl card bg-base-100">
       <div class="card-body pt-30">
         <fieldset class="fieldset">
@@ -72,7 +75,7 @@ logout</a>
           <input id="amount" type="password" class="rounded-full input" placeholder="enter your amount" />
           <br>
           <label class="font-bold text-black label">Pin Number</label>
-          <input maxlength="4" minlength="4" id="cash" type="password" class="rounded-full input" placeholder="enter your pin" />
+          <input maxlength="4" minlength="4" id="cashpass" type="password" class="rounded-full input" placeholder="enter your pin" />
           <button id="Withdraw" class="mt-4 btn rounded-xl btn-primary">Withdraw money</button>
         </fieldset>
       </div>
@@ -173,7 +176,14 @@ logout</a>
     </div>
     </section>
 
+<section id="history" class="container hidden">
+  <div>
+    <h2 class="font-black text-[17px] py-5">transictions</h2>
+    <div id="history-container" class="container py-4 space-y-2 ml-15">
 
+    </div>
+  </div>
+</section>
        
     
 
